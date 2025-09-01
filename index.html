@@ -1,0 +1,57 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Музыкальная игра</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.3/howler.min.js"></script>
+</head>
+<body>
+  <div id="game-container">
+    <div id="hud">
+      <form id="player-form" class="content">
+        <div id="name-form">
+          <span id="error" class="hidden">Некорректное имя. Допустимы<br> буквы, цифры, подчёркивание.</span>
+          <div>
+            <label>Имя: <input type="text" id="name-input" /></label>
+          </div>
+          <div>
+            <label>Уровень сложности:</label>
+            <select id="select-it">
+              <option value="easy" selected>Легкий</option>
+              <option value="medium" selected>Средний</option>
+              <option value="hard" selected>Сложный</option>
+            </select>
+          </div>
+          <button type="submit" id="play" class="butt-play">Играть</button>
+        </div>
+      </form>
+      <div id="lin" class="lin hidden"></div>
+      <div id="stats" class="content-em hidden">
+        <p>Игрок: <span id="player-name">–</span></p>
+        <p>Очки: <span id="score">0</span></p>
+        <p>Время: <span id="timer">0</span> сек</p>
+      </div>
+      <div id="mid-lin" class="lin"></div>
+      <div id="tutorial" class="content">
+        <p>Обучение</p>
+        <p>Нажимайте клавиши W A S D по ритму падающих нот.</p>
+      </div>
+      <div id="end-game" class="hidden">
+        <p>Игра окончена!</p>
+        <button type="submit" id="end-button">Ок</button>
+      </div>
+      <div id="last-lin" class="lin"></div>
+      <div id="statistic">
+        <p>Статистика лучших игроков</p>
+        <ol id="ScoresList"></ol>
+      </div>
+    </div>
+    <canvas id="game-canvas"></canvas>
+    <img id="easter-egg" src="images/easter-egg.png" alt="пасхалка" style="position:absolute;bottom:0;right:0;width:50px;" /> 
+  </div>
+  <script src="js/script.js"></script>
+</body>
+</html>
