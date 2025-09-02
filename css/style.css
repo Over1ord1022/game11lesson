@@ -156,9 +156,7 @@ canvas {
     border: 1px solid var(--text-light);
   }
   
-  #statistic {
-    font-size: 1.25rem;
-  }
+
   
   #end-game {
     left: 50%;
